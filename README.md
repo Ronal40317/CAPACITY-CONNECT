@@ -123,4 +123,4 @@ A production compiler/build step is **not applicable** because the project does 
 
 The UI redesign uses a consistent responsive design system covering navigation, dashboards, cards, forms, tables, badges, progress indicators, modals, typography, spacing, focus states, and mobile navigation.
 
-See `UI_UX_REDESIGN_REPORT.md` for the detailed redesign and verification report.
+See `UI_UX_REDESIGN_REPORT.md` for the detailed design and report.
