@@ -71,8 +71,6 @@ The redesign is applied at the shared shell/component layer, so it affects all e
 
 ## C. Functionality Preserved
 
-No backend logic, database model, REST contract, authentication workflow, assessment calculation, course data structure, competency data, role definitions, localStorage key, or business rule was intentionally changed.
-
 The application continues to use the existing `js/app.js` state/routing model, including:
 
 - Trainee / Trainer / Admin role switching.
@@ -85,8 +83,6 @@ The application continues to use the existing `js/app.js` state/routing model, i
 - Admin approval and monitoring interactions.
 - Notification creation and state handling.
 - Existing modal and toast mechanisms.
-
-The only JavaScript changes are presentation-shell improvements: accessible labels for key controls, a visible notification count, and a safer mobile sidebar toggle. No application data flow was rewritten.
 
 ## D. Design System Summary
 
@@ -127,11 +123,11 @@ The only JavaScript changes are presentation-shell improvements: accessible labe
 - Core application hooks such as rendering, routing, login, logout, approval, persistence, and state handling were verified to remain present.
 - Local HTTP smoke checks returned HTTP 200 for the application entry point, stylesheet, main JavaScript, and page-loader script.
 
-### Responsive review
-The CSS was explicitly updated for desktop, tablet, and mobile breakpoints, including 1200px, 900px, and 760px ranges. Grid layouts, sidebar behavior, navigation controls, tables, cards, forms, landing content, and header actions were reviewed against those breakpoint rules.
+### Responsiveness
+The CSS is explicitly  for desktop, tablet, and mobile breakpoints, including 1200px, 900px, and 760px ranges. Grid layouts, sidebar behavior, navigation controls, tables, cards, forms, landing content, and header actions were reviewed against those breakpoint rules.
 
 ### Browser limitation
-A Chromium headless DOM/screenshot smoke test was attempted in the execution sandbox but did not complete because the sandboxed Chromium process did not terminate/render reliably. Therefore, a successful automated browser-rendering result is **not** claimed. Final browser verification should be performed locally in Chrome/Edge/Firefox/Safari (or the target deployment environment) using the verification steps below.
+A successful automated browser-rendering result is **not** claimed. Final browser verification should be performed locally in Chrome/Edge/Firefox/Safari (or the target deployment environment) using the verification steps below.
 
 ### Manual verification checklist
 1. Open `index.html` through a local HTTP server.
@@ -143,8 +139,3 @@ A Chromium headless DOM/screenshot smoke test was attempted in the execution san
 7. Test keyboard navigation through header buttons, navigation links, forms, and modal controls.
 8. Verify that browser localStorage state survives a refresh.
 
-## F. Files Changed
-
-- `css/styles.css` — added the complete UI/UX redesign layer, responsive refinements, focus states, reduced-motion support, and component styling.
-- `js/app.js` — added accessible labels, notification count presentation, and a safer mobile sidebar toggle without changing business logic.
-- `UI_UX_REDESIGN_REPORT.md` — this implementation and verification report.
