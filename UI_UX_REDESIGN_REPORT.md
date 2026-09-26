@@ -148,9 +148,3 @@ A Chromium headless DOM/screenshot smoke test was attempted in the execution san
 - `css/styles.css` — added the complete UI/UX redesign layer, responsive refinements, focus states, reduced-motion support, and component styling.
 - `js/app.js` — added accessible labels, notification count presentation, and a safer mobile sidebar toggle without changing business logic.
 - `UI_UX_REDESIGN_REPORT.md` — this implementation and verification report.
-
-No backend files or data-model files were introduced or modified.
-
-
-## Alert/Warning UI Preference
-All visible warning, notice, alert, and toast popups have been disabled. Existing actions remain callable, but they no longer display transient alert/toast messages.
